@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&display=swap" rel="stylesheet">
+	
+	<title>Q4_PROJECT</title>
+	
+	<style type="text/css">
+		
+		body{
+			font-family: 'Archivo Narrow', sans-serif;
+			background-color:#17a2b8 ;
+			}
+			.container {
+  width: 900px;
+  height: 350px;
+  margin: 50px;
+}
+::selection {
+    background:#BCECF2;
+    color:black ;
+}
+
+			
+	</style>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <h1 style="font-weight:bold;">CONVERT NOW →</h1>
+   <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+       <li class="nav-item">
+        <a class="nav-link" style="font-weight:bold; color:#24777F"; href="SA_ICT9R_Q4PROJECT_Mella.html";>Length Converter</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"  href="SA_ICT9R_Q4SW2_Mella.html" onclick="alert('You will lose unsaved changes if you leave this page')">Temperature Converter</a>
+      </li>
+       </ul>
+</div>
+</nav>
+
+<center><div class="container bg-light">
+	<hr>
+	<hr>
+
+	<h1 style="font-weight:bold;">MEASURE METERS NOW!</h1>
+	<h3>A converter for measuring millimeters into Centimeters, Meters, and Kilometers. </h3>
+	<p id="today" style="font-weight:bold;"></p>
+
+<img onmouseover="bigImg(this)" 
+	onmouseout="normalImg(this)"
+	border="0" src="ruler.png" width="64" height="64">
+
+	<script>
+		function bigImg(x) {
+			x.style.height = "128px";
+			x.style.width = "128px";
+		}
+		function normalImg(x) {
+			x.style.height = "64px";
+			x.style.width = "64px";
+		}
+	</script>
+
+
+
+</div></center>
+
+<center><div class="container bg-light">
+<hr>
+	<h1 style="font-weight:bold;" id="">Length Converter</h1>
+	<hr>
+	<div class="form-group">
+
+<p>
+  <input id="millimeters" type="number" placeholder="Input millimeters" oninput="lengthConverter(this.value)" onchange="lengthConverter(this.value)">
+</p>
+<h4>Centimeters:</h4>
+<p><span id="Centimeters"></span></p>
+<h4>Meters:</h4>
+<p><span id="Meters"></span></p>
+<h4>Kilometers:</h4>
+<p><span id="Kilometers"></span></p>
+
+
+
+<script>
+function lengthConverter(valNum) {
+  valNum = parseFloat(valNum);
+  document.getElementById("Centimeters").innerHTML=(valNum)/10;
+  document.getElementById("Meters").innerHTML=(valNum)/1000;
+  document.getElementById("Kilometers").innerHTML=(valNum)/1000000;
+}
+</script>
+
+<br>
+<hr>
+</div></center>
+</body>
+</html>
+<!-- Reference: 
+″. (n.d.). ″ - Wiktionary. Retrieved May 18, 2023, from https://www.flaticon.com/free-icon/ruler_595386?term=ruler&page=1&position=2&origin=tag&related_id=595386
+
+*PICTURES ARE NOT PERSONALLY OWNED*-->
